@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hockeys</title>
+
+    <!-- font awesome icons cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind css cdn -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .manrope {
+        font-family: "Manrope", sans-serif;
+      }
+
+      .common-bg {
+        background: #ff4240;
+        color: #fff;
+      }
+      .text-common {
+        color: #ff4240;
+      }
+
+      .common-style {
+        border-top: 1px dotted #13131833;
+        border-bottom: 1px dashed #13131833;
+        padding: 1.5rem 0;
+      }
+
+      .common-style h3 {
+        color: #131318;
+        margin-bottom: 24px;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 36px;
+        font-weight: 800;
+      }
+
+      .common-style p {
+        max-width: 607px;
+        margin: 0 auto;
+        color: #13131899;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <!-- header section -->
+      <header>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="block dropdown lg:hidden">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 lg:flex"
+              >
+                <li class="text-common">Home</li>
+                <li>About</li>
+                <li>Pages</li>
+                <li>Blog</li>
+                <li>Contant</li>
+              </ul>
+            </div>
+            <div class="navbar-center">
+              <a class="btn btn-ghost text-xl"
+                ><img class="max-w-40" src="./Images/logo.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <ul class="flex justify-center space-x-6 text-xl manrope font-bold">
+              <li class="text-common">Home</li>
+              <li>About</li>
+              <li>Pages</li>
+              <li>Blog</li>
+              <li>Contant</li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button class="hidden lg:block btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button class="btn common-bg btn-accent">
+              <a href="#">Get Ticket</a>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- banner secton -->
+      <section class="mb-24">
+        <div class="relative">
+          <div class="carousel w-full rounded-2xl">
+            <div
+              id="slide1"
+              class="carousel-item relative w-full max-h-[720px] h-[70%]"
+            >
+              <img src="./Images/1.png" class="w-full" />
+              <div
+                class="absolute flex justify-between transform space-x-8 left-10 bottom-10"
+              >
+                <a href="#slide3" class="btn btn-circle text-white bg-black"
+                  >❮</a
+                >
+                <a href="#slide2" class="btn btn-circle text-white bg-black"
+                  >❯</a
+                >
+              </div>
+            </div>
+            <div
+              id="slide2"
+              class="carousel-item relative w-full max-h-[720px] h-[70%]"
+            >
+              <img src="./Images/bn2 (1).jpg" class="w-full" />
+              <div
+                class="absolute flex justify-between transform space-x-8 left-10 bottom-10"
+              >
+                <a href="#slide1" class="btn btn-circle text-white bg-black"
+                  >❮</a
+                >
+                <a href="#slide3" class="btn btn-circle text-white bg-black"
+                  >❯</a
+                >
+              </div>
+            </div>
+            <div
+              id="slide3"
+              class="carousel-item relative w-full max-h-[720px] h-[70%]"
+            >
+              <img src="./Images/bn3 (1).jpg" class="w-full" />
+              <div
+                class="absolute flex justify-between transform space-x-8 left-10 bottom-10"
+              >
+                <a href="#slide2" class="btn btn-circle text-white bg-black"
+                  >❮</a
+                >
+                <a href="#slide1" class="btn btn-circle text-white bg-black"
+                  >❯</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-[#131318] p-8 rounded-2xl lg:w-[566px] lg:absolute lg:right-9 lg:bottom-10"
+          >
+            <h3 class="text-white manrope text-2xl font-extrabold mb-4">
+              Meet all the heroes from the field
+            </h3>
+            <p class="text-[#FFFFFF99] manrope text-lg font-medium">
+              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+              turpis placerat dolor. Purus urna in sit nullam proin.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Hockeys Club -->
+      <section class="">
+        <div>
+          <div class="common-style my-20">
+            <h3>Professional Hockeys Club</h3>
+            <p>
+              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+              turpis placerat dolor. Purus urna in sit nullam proin.
+            </p>
+          </div>
+          <div class="lg:flex">
+            <div class="text-center">
+              <div
+                class="border-8 rounded-full w-32 h-32 mx-auto my-6 relative"
+              >
+                <div
+                  class="radial-progress rotate-180 text-common absolute right-[-9px] bottom-[-8px]"
+                  style="--value: 87; --size: 8rem"
+                  role="progressbar"
+                >
+                  <span class="text-black rotate-180"> 87% </span>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-[#131318] manrope text-xl font-semibold mb-4">
+                  Prayer Facility
+                </h4>
+                <p class="text-[#13131899] manrope text-lg font-normal">
+                  Amet consectetur. Condimentum dignissim adipiscing .
+                </p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="border-8 rounded-full w-32 h-32 mx-auto my-6 relative"
+              >
+                <div
+                  class="radial-progress rotate-180 text-[#49D293] absolute right-[-9px] bottom-[-8px]"
+                  style="--value: 95; --size: 8rem"
+                  role="progressbar"
+                >
+                  <span class="text-black rotate-180"> 95% </span>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-[#131318] manrope text-xl font-semibold mb-4">
+                  Experienced Coach
+                </h4>
+                <p class="text-[#13131899] manrope text-lg font-normal">
+                  Amet consectetur. Condimentum dignissim adipiscing.
+                </p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="border-8 rounded-full w-32 h-32 mx-auto my-6 relative"
+              >
+                <div
+                  class="radial-progress rotate-180 text-[#FFB546] absolute right-[-9px] bottom-[-8px]"
+                  style="--value: 90; --size: 8rem"
+                  role="progressbar"
+                >
+                  <span class="text-black rotate-180"> 90% </span>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-[#131318] manrope text-xl font-semibold mb-4">
+                  Senior Player
+                </h4>
+                <p class="text-[#13131899] manrope text-lg font-normal">
+                  Amet consectetur. Condimentum dignissim adipiscing .
+                </p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="border-8 rounded-full w-32 h-32 mx-auto my-6 relative"
+              >
+                <div
+                  class="radial-progress rotate-180 text-[#4C8DF1] absolute right-[-9px] bottom-[-8px]"
+                  style="--value: 80; --size: 8rem"
+                  role="progressbar"
+                >
+                  <span class="text-black rotate-180"> 80% </span>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-[#131318] manrope text-xl font-semibold mb-4">
+                  Training Ground
+                </h4>
+                <p class="text-[#13131899] manrope text-lg font-normal">
+                  Amet consectetur. Condimentum dignissim adipiscing .
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- program section -->
+      <section class="my-10 lg:my-24">
+        <div>
+          <div class="common-style">
+            <h3>Program Sections</h3>
+            <p>
+              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+              turpis placerat dolor. Purus urna in sit nullam proin.
+            </p>
+          </div>
+
+          <div>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div
+                class="col-span-2 lg:col-span-1 bg-[url('./Images/2.png')] bg-no-repeat bg-cover rounded-xl lg:rounded-2xl p-6 text-white lg:pt-24 lg:pb-10 lg:px-10"
+              >
+                <h4 class="text-xl font-extrabold manrope lg:text-2xl">
+                  Junior Program
+                </h4>
+                <p class="max-w-[500px] my-4">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <button class="btn common-bg btn-accent">Register Now!</button>
+              </div>
+              <div
+                class="col-span-2 lg:col-span-1 bg-[url('./Images/2.png')] bg-no-repeat bg-cover rounded-xl lg:rounded-2xl p-6 text-white lg:pt-24 lg:pb-10 lg:px-10"
+              >
+                <h4 class="text-xl font-extrabold manrope lg:text-2xl">
+                  Junior Program
+                </h4>
+                <p class="max-w-[500px] my-4">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <button class="btn common-bg btn-accent">Register Now!</button>
+              </div>
+              <div
+                class="col-span-2 bg-[url('./Images/4.png')] bg-no-repeat bg-cover rounded-xl lg:rounded-2xl p-6 text-white lg:pt-52 lg:pb-10 lg:px-10"
+              >
+                <h4 class="text-xl font-extrabold manrope lg:text-2xl">
+                  Junior Program
+                </h4>
+                <p class="max-w-[500px] my-4">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <button class="btn common-bg btn-accent">Register Now!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- our new products -->
+      <section>
+        <div>
+          <div class="common-style">
+            <h3>Our New Products</h3>
+            <p>
+              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+              turpis placerat dolor. Purus urna in sit nullam proin.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-y-6 md:gap-6 lg:gap-6">
+            <div class="card card-body md:card-side bg-base-100 shadow-xl">
+              <figure class="">
+                <img class="w-96 md:w-full" src="./Images/5.png" alt="shirt" />
+              </figure>
+              <div class="flex flex-col space-y-3 ml-5">
+                <div
+                  class="flex space-x-4 text-[#13131880] manrope text-base font-medium"
+                >
+                  <div>
+                    <i
+                      class="fa-solid fa-star text-[#F99808] md:mr-2 lg:mr-2"
+                    ></i>
+                    <span>5.0</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-eye mr-2"></i> <span>20</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-heart mr-2"></i>
+                    <span>200</span>
+                  </div>
+                </div>
+                <h2 class="card-title manrope">World Cup Flags Football</h2>
+                <p class="text-[#13131899] text-base manrope font-medium">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+                <div class="space-y-4 md:flex md:space-y-0">
+                  <p class="text-common manrope text-lg font-extrabold">
+                    Price - $22.00
+                  </p>
+                  <div class="text-[#13131880] manrope text-base font-medium">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                    <span> Delivery Fee : Free </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-body card-side bg-base-100 shadow-xl">
+              <figure>
+                <img src="./Images/5.png" alt="shirt" />
+              </figure>
+              <div class="flex flex-col space-y-3 ml-5">
+                <div
+                  class="flex space-x-4 text-[#13131880] manrope text-base font-medium"
+                >
+                  <div>
+                    <i class="fa-solid fa-star text-[#F99808] mr-2"></i>
+                    <span>5.0</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-eye mr-2"></i> <span>20</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-heart mr-2"></i>
+                    <span>200</span>
+                  </div>
+                </div>
+                <h2 class="card-title manrope">World Cup Flags Football</h2>
+                <p class="text-[#13131899] text-base manrope font-medium">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+                <div class="flex">
+                  <p class="text-common manrope text-lg font-extrabold">
+                    Price - $22.00
+                  </p>
+                  <div class="text-[#13131880] manrope text-base font-medium">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                    <span> Delivery Fee : Free </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-body card-side bg-base-100 shadow-xl">
+              <figure>
+                <img src="./Images/5.png" alt="shirt" />
+              </figure>
+              <div class="flex flex-col space-y-3 ml-5">
+                <div
+                  class="flex space-x-4 text-[#13131880] manrope text-base font-medium"
+                >
+                  <div>
+                    <i class="fa-solid fa-star text-[#F99808] mr-2"></i>
+                    <span>5.0</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-eye mr-2"></i> <span>20</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-heart mr-2"></i>
+                    <span>200</span>
+                  </div>
+                </div>
+                <h2 class="card-title manrope">World Cup Flags Football</h2>
+                <p class="text-[#13131899] text-base manrope font-medium">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+                <div class="flex">
+                  <p class="text-common manrope text-lg font-extrabold">
+                    Price - $22.00
+                  </p>
+                  <div class="text-[#13131880] manrope text-base font-medium">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                    <span> Delivery Fee : Free </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-body card-side bg-base-100 shadow-xl">
+              <figure>
+                <img src="./Images/5.png" alt="shirt" />
+              </figure>
+              <div class="flex flex-col space-y-3 ml-5">
+                <div
+                  class="flex space-x-4 text-[#13131880] manrope text-base font-medium"
+                >
+                  <div>
+                    <i class="fa-solid fa-star text-[#F99808] mr-2"></i>
+                    <span>5.0</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-eye mr-2"></i> <span>20</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-heart mr-2"></i>
+                    <span>200</span>
+                  </div>
+                </div>
+                <h2 class="card-title manrope">World Cup Flags Football</h2>
+                <p class="text-[#13131899] text-base manrope font-medium">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+                <div class="flex">
+                  <p class="text-common manrope text-lg font-extrabold">
+                    Price - $22.00
+                  </p>
+                  <div class="text-[#13131880] manrope text-base font-medium">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                    <span> Delivery Fee : Free </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-body card-side bg-base-100 shadow-xl">
+              <figure>
+                <img src="./Images/5.png" alt="shirt" />
+              </figure>
+              <div class="flex flex-col space-y-3 ml-5">
+                <div
+                  class="flex space-x-4 text-[#13131880] manrope text-base font-medium"
+                >
+                  <div>
+                    <i class="fa-solid fa-star text-[#F99808] mr-2"></i>
+                    <span>5.0</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-eye mr-2"></i> <span>20</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-heart mr-2"></i>
+                    <span>200</span>
+                  </div>
+                </div>
+                <h2 class="card-title manrope">World Cup Flags Football</h2>
+                <p class="text-[#13131899] text-base manrope font-medium">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+                <div class="flex">
+                  <p class="text-common manrope text-lg font-extrabold">
+                    Price - $22.00
+                  </p>
+                  <div class="text-[#13131880] manrope text-base font-medium">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                    <span> Delivery Fee : Free </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-body card-side bg-base-100 shadow-xl">
+              <figure>
+                <img src="./Images/5.png" alt="shirt" />
+              </figure>
+              <div class="flex flex-col space-y-3 ml-5">
+                <div
+                  class="flex space-x-4 text-[#13131880] manrope text-base font-medium"
+                >
+                  <div>
+                    <i class="fa-solid fa-star text-[#F99808] mr-2"></i>
+                    <span>5.0</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-eye mr-2"></i> <span>20</span>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-heart mr-2"></i>
+                    <span>200</span>
+                  </div>
+                </div>
+                <h2 class="card-title manrope">World Cup Flags Football</h2>
+                <p class="text-[#13131899] text-base manrope font-medium">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+                <div class="flex">
+                  <p class="text-common manrope text-lg font-extrabold">
+                    Price - $22.00
+                  </p>
+                  <div class="text-[#13131880] manrope text-base font-medium">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                    <span> Delivery Fee : Free </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients Question section -->
+      <section class="my-10 lg:my-20">
+        <div>
+          <div class="common-style">
+            <h3>Clients Question</h3>
+            <p>
+              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+              turpis placerat dolor. Purus urna in sit nullam proin.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
